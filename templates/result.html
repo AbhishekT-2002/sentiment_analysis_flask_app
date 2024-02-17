@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+
+{% block title %}Sentiment Analysis - Result{% endblock %}
+{% block heading %}Sentiment Analysis Result{% endblock %}
+
+{% block content %}
+{% if prediction == 'positive' %}
+    <div class="alert alert-success" role="alert">
+        The predicted sentiment is: <strong>Positive</strong>
+    </div>
+{% else %}
+    <div class="alert alert-danger" role="alert">
+        The predicted sentiment is: <strong>Negative</strong>
+    </div>
+{% endif %}
+<a href="/" class="btn btn-primary">Back to Home</a>
+{% endblock %}
